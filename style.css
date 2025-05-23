@@ -1,0 +1,87 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #babde5;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Área principal do jogo em tela cheia */
+#gameArea {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Fundo animado duplicado */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-repeat: repeat-x;
+    z-index: 0;
+}
+
+#bg2 {
+    left: 100vw;
+}
+
+/* Gato */
+#bird {
+    width: 150px;
+    height: 150px;
+    background-image: url('gatinho.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+/* Cano */
+.pipe {
+    width: 40px;
+    background-color: rgb(2, 0, 128);
+    position: absolute;
+    z-index: 4;
+}
+
+.pipe.top {
+    top: 0;
+}
+
+.pipe.bottom {
+    bottom: 0;
+}
+
+/* Telas de início e game over */
+#startScreen, #gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: none;
+    z-index: 3;
+}
+
+#startScreen button, #gameOverScreen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
